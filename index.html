@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Save Coral</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/scrolling.css"/>
+
+    <style type="text/css">
+        body {
+            margin: 0px;
+        }
+
+        .pop {
+            position: fixed;
+            left: 35%;
+            top: 150px;
+            background: transparent;
+            width: 600px;
+
+        }
+
+        .area {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .popInfo {
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 600px;
+            height: 350px;
+            border-radius: 10px;
+            margin: 5% auto;
+            text-align: left;
+            z-index: 1000;
+        }
+
+        .popInfo1 {
+            background-image: url(img/popoutCoral1.jpg);
+            box-shadow: 0px 4px 18px 0px rgba(36, 39, 46, 0.5);
+        }
+
+        .popInfo2 {
+            background-image: url(img/popoutCoral2.jpg);
+        }
+
+        .popInfo3 {
+            background-image: url(img/popoutCoral3.jpg);
+        }
+
+        .popInfo4 {
+            background-image: url(img/popoutCoral4.jpg);
+        }
+
+        .popInfo5 {
+            background-image: url(img/popoutCoral5.jpg);
+        }
+
+        .popInfo6 {
+            background-image: url(img/popoutCoral6.jpg);
+        }
+
+        .popInfo7 {
+            background-image: url(img/popoutCoral7.jpg);
+        }
+
+        .popInfo8 {
+            background-image: url(img/popoutCoral8.jpg);
+        }
+
+        .popInfo9 {
+            background-image: url(img/popoutCoral9.jpg);
+        }
+
+        .popInfo h4 {
+            margin: 75px 90px 15px 90px;
+        }
+
+        #header1, #header2, #header3, #header4, #header5, #header6 {
+            height: 40px;
+        }
+
+        #header-right1, #header-right2, #header-right3, #header-right4, #header-right5, #header-right6, #header-right7, #header-right8, #header-right9 {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background: transparent;
+            color: #000000;
+            right: 5px;
+            top: 5px;
+            text-align: center;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body class="lang-en">
+<!-- Header -->
+<header id="one">
+
+    <!--      -->
+    <div class="container">
+        <div id="MagicMenu" class="nav-header">
+            <div class="container">
+                <div class="logo float-left">
+                    <a href="#"><img src="img/weblogo2.png" width="140" height="50" alt=""></a>
+                </div>
+                <div class="navbar pull-right">
+                    <table><tr>
+                        <td style="padding-left: 10px"><a href=" ">Home</a></td>&emsp;
+                        <td style="padding-left: 30px"><a href="fact.html">Coral Reef</a></td>
+                        <td style="padding-left: 30px"><a href="data.html">Threat</a></td>
+                        <td style="padding-left: 30px"><a href="quiz.html">Quiz</a></td>
+                        <td style="padding-left: 30px"><a href="game.html">Game</a></td>
+                        <td style="padding-left: 30px"><a href="aboutus.html">About us</a></td>
+                    </tr></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero">
+    </div>
+</header>
+<!-- Nav Squares -->
+<section class="container-fluid info-squares">
+    <div class="row no-gutter">
+        <div class="col-lg-3 col-sm-3 col-xs-12">
+            <a href="fact.html">
+                <div class="square"
+                     style="background-color: rgba(242, 242, 242, 1); background-image:url(img/icon2.jpg);">
+                    <i class="fa fa-magic" aria-hidden="true"></i>
+                    <h4 style ="font-size: 18px;">Coral reef</h4>
+                    <p>Learn more about coral reefs</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-xs-12">
+            <a href="data.html">
+                <div class="square"
+                     style="background-color: rgba(242, 242, 242, 1); background-image:url(img/icon2.jpg);">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <h4 style ="font-size: 18px;">Threats</h4>
+                    <p>See the fragility of the beauty</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-xs-12">
+            <a href="quiz.html">
+                <div class="square"
+                     style="background-color: rgba(242, 242, 242, 1); background-image:url(img/icon2.jpg);">
+                    <i class="fa fa-map" aria-hidden="true"></i>
+                    <h4 style ="font-size: 18px;">Quiz</h4>
+                    <p>See what do you know about coral</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-3 col-xs-12">
+            <a href="game.html">
+                <div class="square"
+                     style="background-color: rgba(242, 242, 242, 1); background-image:url(img/icon2.jpg);">
+                    <i class="fa fa-gamepad" aria-hidden="true"></i>
+                    <h4 style ="font-size: 18px;">Game</h4>
+                    <p>Little games about protecting coral</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Coral facts-->
+<section id="two" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h6>Let's Find Out Corals</h6>
+                <p style="margin-top: 10px">Flowers under the sea</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="area hide"></div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="hover01" href="#">
+                    <figure><img class="img-fluid img-fluid1" src="img/capnella_imbricata.jpg" alt=""
+                                 onclick="popOut1()"></figure>
+                </a>
+                <div class="portfolio-caption">
+                    <h4 style ="font-size: 18px;">Capnella Imbricata</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="hover01" href="#">
+                    <figure><img class="img-fluid" src="img/Heliopora_coerulea.jpg" alt="" onclick="popOut2()"></figure>
+                </a>
+                <div class="portfolio-caption">
+                    <h4 style ="font-size: 18px;">Heliopora Coerulea</h4>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a class="hover01" href="#">
+                    <figure><img class="img-fluid" src="img/Hicksonella_expansa.jpg" alt="" onclick="popOut3()">
+                    </figure>
+                </a>
+                <div class="portfolio-caption">
+                    <h4 style ="font-size: 18px;">Hicksonella Expansa</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden-gallery">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="hover01" href="#">
+                        <figure><img class="img-fluid" src="img/isis_hippuris.jpg" alt="" onclick="popOut4()"></figure>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style ="font-size: 18px;">Isis Hippuris</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="hover01" href="#">
+                        <figure><img class="img-fluid" src="img/Pinnigorgia_flava.jpg" alt="" onclick="popOut5()">
+                        </figure>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style ="font-size: 18px;">Pinnigorgia Flava</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="hover01" href="#">
+                        <figure><img class="img-fluid" src="img/sinunlaria_brassica.jpg" alt="" onclick="popOut6()">
+                        </figure>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style ="font-size: 18px;">Sinunlaria Brassica</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="hover01" href="#">
+                        <figure><img class="img-fluid" src="img/capnella_lacertiliensis.jpg" alt="" onclick="popOut7()">
+                        </figure>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style ="font-size: 18px;">Capnella lacertiliensis</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="hover01" href="#">
+                        <figure><img class="img-fluid" src="img/sinularia_flexibilis.jpg" alt="" onclick="popOut8()">
+                        </figure>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style ="font-size: 18px;">Sinularia Flexibilis</h4>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a class="hover01" href="#">
+                        <figure><img class="img-fluid" src="img/paralemnalia_clavata.jpg" alt="" onclick="popOut9()">
+                        </figure>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4 style ="font-size: 18px;">Paralemnalia Clavata</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--popout windows-->
+        <div class="pop" id='pop1'>
+            <div class="popInfo popInfo1">
+
+                <div id="header1">
+                    <div id="header-right1" onclick="hidePop1()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop" id='pop2'>
+            <div class="popInfo popInfo2">
+                <div id="header2">
+                    <div id="header-right2" onclick="hidePop2()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop" id='pop3'>
+            <div class="popInfo popInfo3">
+                <div id="header3">
+                    <div id="header-right3" onclick="hidePop3()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop " id='pop4'>
+            <div class="popInfo popInfo4">
+                <div id="header4">
+                    <div id="header-right4" onclick="hidePop4()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop" id='pop5'>
+            <div class="popInfo popInfo5">
+                <div id="header5">
+                    <div id="header-right5" onclick="hidePop5()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop" id='pop6'>
+            <div class="popInfo popInfo6">
+                <div id="header6">
+                    <div id="header-right6" onclick="hidePop6()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop" id='pop7'>
+            <div class="popInfo popInfo7">
+                <div id="header7">
+                    <div id="header-right7" onclick="hidePop7()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop" id='pop8'>
+            <div class="popInfo popInfo8">
+                <div id="header8">
+                    <div id="header-right8" onclick="hidePop8()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="pop" id='pop9'>
+            <div class="popInfo popInfo9">
+                <div id="header9">
+                    <div id="header-right9" onclick="hidePop9()" style="cursor: pointer;"><img src="img/xblack.png"
+                                                                                               style="width: 30px; height: 30px"
+                                                                                               alt="Menu"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="show-more-btn" style="width: 150px">
+                <div class="btn-wrap">
+                    <a href="#" class="button2">Show Me More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Volunteer events-->
+
+<section id="six" class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="title">
+                <h6>Feel free to learn </h6>
+                <p style="margin-top: 10px">More available Websites</p>
+            </div>
+        </div>
+
+        <div class="row no-gutter">
+            <div id="carousel">
+                <!-- scroll -->
+                <div id="list" style="left: -800px">
+                    <img src="./img/lunbo3.png" alt=""
+                         onClick="javascript:window.open('https://reefrestorationfoundation.org/?gclid=EAIaIQobChMI0qiu4sOI6QIVRB0rCh2D2Q1TEAAYASAAEgIkmPD_BwE','_blank')">
+                    <img src="./img/lunbo1.png" alt=""
+                         onClick="javascript:window.open('https://www.earthwatch.org.au/save-the-reef-and-oceans','_blank')">
+                    <img src="./img/lunbo2.png" alt=""
+                         onClick="javascript:window.open('https://www.natureaustralia.org.au/what-we-do/our-priorities/oceans/ocean-stories/victorias-oyster-reefs/','_blank')">
+                    <img src="./img/lunbo3.png" alt=""
+                         onClick="javascript:window.open('https://reefrestorationfoundation.org/?gclid=EAIaIQobChMI0qiu4sOI6QIVRB0rCh2D2Q1TEAAYASAAEgIkmPD_BwE','_blank')">
+                    <img src="./img/lunbo1.png" alt=""
+                         onClick="javascript:window.open('https://www.earthwatch.org.au/save-the-reef-and-oceans','_blank')">
+
+                </div>
+                <!-- nav -->
+                <div id="slider_nav">
+                    <span class='active'></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+                <!-- next,previrous -->
+
+            </div>
+            <img id="prev" src="img/arrowleft.png"/>
+            <img id="next" src="img/arrowright.png"/>
+
+        </div>
+
+    </div>
+
+</section>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+<!--scripts-->
+<script type="text/javascript" src="js/scrolling.js"></script>
+
+<!--pop out windows-->
+<script type="text/javascript">
+
+    $(".show-more-btn").on("click", function () {
+        var text = $(".button2").html();
+        if (text == "Show Me More") {
+            $(".button2").html("Show Me Less");
+        } else if (text == "Show Me Less") {
+            $(".button2").html("Show Me More");
+        }
+    })
+    $(document).mouseup(function (e) {
+        var_con = $('#pop1');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop1").hide();
+        }
+    });
+    $(document).mouseup(function (e) {
+        var_con = $('#pop2');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop2").hide();
+        }
+    });
+    $(document).mouseup(function (e) {
+        var_con = $('#pop3');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop3").hide();
+        }
+    });
+    $(document).mouseup(function (e) {
+        var_con = $('#pop4');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop4").hide();
+        }
+    });
+    $(document).mouseup(function (e) {
+        var_con = $('#pop5');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop5").hide();
+        }
+    });
+    $(document).mouseup(function (e) {
+        var_con = $('#pop6');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop6").hide();
+        }
+    });
+
+    $(document).mouseup(function (e) {
+        var_con = $('#pop7');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop7").hide();
+        }
+    });
+    $(document).mouseup(function (e) {
+        var_con = $('#pop8');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop8").hide();
+        }
+    });
+
+    $(document).mouseup(function (e) {
+        var_con = $('#pop9');//设置目标区域
+        if (!var_con.is(e.target) && var_con.has(e.target).length === 0) {//Mark1
+            $("#pop9").hide();
+        }
+    });
+
+
+    $(window).scroll(function () {
+        if ($("#pop1")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop1").hide();
+            }
+
+        }
+    });
+    $(window).scroll(function () {
+        if ($("#pop2")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop2").hide();
+            }
+
+        }
+    });
+    $(window).scroll(function () {
+        if ($("#pop3")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop3").hide();
+            }
+
+        }
+    });
+    $(window).scroll(function () {
+        if ($("#pop4")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop4").hide();
+            }
+
+        }
+    });
+    $(window).scroll(function () {
+        if ($("#pop5")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop5").hide();
+            }
+
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($("#pop6")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop6").hide();
+            }
+
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($("#pop7")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop7").hide();
+            }
+
+        }
+    });
+    $(window).scroll(function () {
+        if ($("#pop8")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop8").hide();
+            }
+
+        }
+    });
+    $(window).scroll(function () {
+        if ($("#pop9")[0].style.display == "") {
+            scrolltop = $(document).scrollTop();
+            if (scrolltop > 1200 || scrolltop < 500) {
+                $("#pop9").hide();
+            }
+
+        }
+    });
+</script>
+<script>
+    document.getElementById('pop1').style.display = "none";
+
+    function popOut1() {
+        document.getElementById('pop1').style.display = "";
+    }
+
+    function hidePop1() {
+        document.getElementById('pop1').style.display = "none";
+    }
+
+
+    document.getElementById('pop2').style.display = "none";
+
+    function popOut2() {
+        document.getElementById('pop2').style.display = "";
+    }
+
+    function hidePop2() {
+        document.getElementById('pop2').style.display = "none";
+    }
+
+    //
+    document.getElementById('pop3').style.display = "none";
+
+    function popOut3() {
+        document.getElementById('pop3').style.display = "";
+    }
+
+    function hidePop3() {
+        document.getElementById('pop3').style.display = "none";
+    }
+
+    //
+    document.getElementById('pop4').style.display = "none";
+
+    function popOut4() {
+        document.getElementById('pop4').style.display = "";
+    }
+
+    function hidePop4() {
+        document.getElementById('pop4').style.display = "none";
+    }
+
+    //
+    document.getElementById('pop5').style.display = "none";
+
+    function popOut5() {
+        document.getElementById('pop5').style.display = "";
+    }
+
+    //
+    function hidePop5() {
+        document.getElementById('pop5').style.display = "none";
+    }
+
+    //
+    document.getElementById('pop6').style.display = "none";
+
+    function popOut6() {
+        document.getElementById('pop6').style.display = "";
+    }
+
+    function hidePop6() {
+        document.getElementById('pop6').style.display = "none";
+    }
+
+    document.getElementById('pop7').style.display = "none";
+
+    function popOut7() {
+        document.getElementById('pop7').style.display = "";
+    }
+
+    function hidePop7() {
+        document.getElementById('pop7').style.display = "none";
+    }
+
+    document.getElementById('pop8').style.display = "none";
+
+    function popOut8() {
+        document.getElementById('pop8').style.display = "";
+    }
+
+    function hidePop8() {
+        document.getElementById('pop8').style.display = "none";
+    }
+
+    document.getElementById('pop9').style.display = "none";
+
+    function popOut9() {
+        document.getElementById('pop9').style.display = "";
+    }
+
+    function hidePop9() {
+        document.getElementById('pop9').style.display = "none";
+    }
+
+</script>
+<!---->
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-col">
+                    <h3 style="color:  rgba(255, 255, 255, 255);font-size: 22px; text-align: center;">ABOUT
+                        SAVECORAL</h3>
+                    <p style="color:  rgba(255, 255, 255, 255); font-size: 20px;text-align: center;line-height: 30px;margin-top: 30px;">
+                        We hope that all corals are valued and protected by reducing marine pollution</p>
+                </div>
+            </div> <!-- end of col -->
+
+            <div class="col-md-4">
+                <div class="footer-col">
+                    <h3 style="color:  rgba(255, 255, 255, 255);font-size: 22px;text-align: center;">CONTACT US</h3>
+                    <div class="row">
+                        <img src="img/footer-icon3.png" width="30px" height="30px"
+                             style="margin-right: 5px;margin-top:30px;">
+                        <h3 style="color:  rgba(255, 255, 255, 255);text-align: center;margin-top: 30px;">South Bank,
+                            VIC,3006</h3>
+                    </div>
+                    <div class="row">
+                        <img src="img/footer-icon2.png" width="30px" height="30px" style="margin-right: 5px;">
+                        <h3 style="color:  rgba(255, 255, 255, 255);text-align: center;">+61 421******</h3>
+                    </div>
+                    <div class="row">
+                        <img src="img/footer-icon4.png" width="30px" height="30px" style="margin-right: 5px;">
+                        <h3 style="color:  rgba(255, 255, 255, 255);text-align: center;">
+                            ysha0023@student.monash.edu</h3>
+                    </div>
+
+
+                </div>
+            </div> <!-- end of col -->
+
+            <div class="col-md-4">
+                <div class="footer-col last" style="text-align: center;">
+                    <div class="row">
+                        <h3 style="color:  rgba(255, 255, 255, 255);font-size: 22px;margin: auto;">SOCIAL MEDIA</h3>
+                    </div>
+                    <div class="row">
+
+                        <img class="footer-img" src="img/footerins.png" width="80px" height="80px"
+                             style="margin: 30px auto 0 auto;" alt=""
+                             onClick="javascript:window.open('https://www.instagram.com/project_blooms_savecoral/','_blank')">
+
+                    </div>
+
+
+                </div>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+        <div class="row" style="text-align: center;">
+            <h3 style="color:  rgba(255, 255, 255, 255);margin: auto;border-top: 2px dashed rgba(255, 255, 255, 1)">
+                &COPY;Team Project Blooms.All Rights Reserved.</h3>
+        </div>
+    </div> <!-- end of container -->
+</div> <!-- end of footer -->
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clean coral garden</title>
+<style>
+
+html, body{
+	height: 100%;
+	margin: 0;
+}
+.cleanhero{
+	background-image: url("gameImages/gameBG.jpg");
+	background-size: cover;
+	height: 1400px;
+}
+.go-back{
+	padding: 60px 80px 0 60px;
+}
+.go-back a{
+	transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+	padding: 8px;
+	background-color: #1E90FF;
+	text-decoration: none;
+	border: 1px solid #1E90ec;
+	border-radius: 5px;
+	color:#D9D9D9;
+	box-shadow: #414BAA 0px 0px 0px 0px inset;
+}
+.go-back a:hover{
+	color: #414BAA;
+	box-shadow: #10CAB7 0 80px 0px 1px inset;
+	text-decoration: none;
+}
+.game{
+	width:560px;
+	margin:10px auto;
+
+}
+.gameBTN{
+	margin: 10px;
+	padding: 8px;
+	border: 1px solid #414BAA;
+	background-color: #30BAE7;
+	font-family: "Comic Sans MS";
+	font-size: 15px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	text-decoration: none;
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+.gameBTN:hover{
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 4px 4px 2px rgba(0,0,0,.078),4px 4px 8px #10CAB7;
+	box-shadow: inset 4px 4px 2px rgba(0,0,0,.075),4px 4px 8px #10CAB7;
+}
+#canvas{
+	border: 12px solid #eeeeee;
+	border-radius: 5px;
+	box-shadow: 4px 4px 3px #6C6C6C;
+	-webkit-box-shadow: 4px 4px 3px #6C6C6C;
+	-moz-box-shadow: 4px 4px 3px #6C6C6C;
+}
+#msg{
+	font-size: 20px;
+	font-family: "Comic Sans MS";
+	padding: 10px;
+}
+</style>
+</head>
+<body onkeydown="doKeyDown(event)">
+<div class="cleanhero">
+<div class="go-back"><a  href="game.html">Go back</a></div>
+<div class="game">
+
+		<div id="msg"></div>
+	<input class="gameBTN" type="button" value="Previous level" onClick="NextLevel(-1)">
+	<input class="gameBTN" type="button" value="Next level" onClick="NextLevel(1)">
+	<input class="gameBTN" type="button" value="Reset" onClick="NextLevel(0)">
+		<canvas id="canvas" width="560" height="560"></canvas>
+
+	</div>
+</div>
+<script src="js/mapdata100.js"></script>
+<script>
+	var can = document.getElementById("canvas");
+	var msg = document.getElementById("msg");
+	var cxt = can.getContext("2d");
+	var w = 35,h = 35;
+	var curMap;
+	var curLevel;
+	var curMan;
+	var iCurlevel = 0;//current level
+	var moveTimes = 0;
+	//preload images
+	var oImgs = {
+		"block" : "gameImages/block.gif",
+		"wall" : "gameImages/wall.png",
+		"box" : "gameImages/box.png",
+		"ball" : "gameImages/bin.png",
+		"up" : "gameImages/up.png",
+		"down" : "gameImages/down.png",
+		"left" : "gameImages/left.png",
+		"right" : "gameImages/right.png",
+	}
+	function imgPreload(srcs,callback){
+		var count = 0,imgNum = 0,images = {};
+
+		for(src in srcs){
+			imgNum++;
+		}
+		for(src in srcs ){
+			images[src] = new Image();
+			images[src].onload = function(){
+				//check the images loading
+				if (++count >= imgNum)
+				{
+					callback(images);
+				}
+			}
+			images[src].src = srcs[src];
+		}
+	}
+	var block,wall,box,ball,up,down,left,right;
+	imgPreload(oImgs,function(images){
+		//console.log(images.block);
+		block = images.block;
+		wall = images.wall;
+		box = images.box;
+		ball = images.ball;
+		up = images.up;
+		down = images.down;
+		left = images.left;
+		right = images.right;
+		init();
+	});
+	//initiate game
+	function init(){
+		//InitMap();
+		//DrawMap(levels[0]);
+		initLevel();//initiate level
+		showMoveInfo();//get the map information of current level
+	}
+	//draw background
+	function InitMap(){
+		for (var i=0;i<16 ;i++ )
+		{
+			for (var j=0;j<16 ;j++ )
+			{
+				cxt.drawImage(block,w*j,h*i,w,h);
+			}
+		}
+	}
+	//man location
+	function Point(x,y){
+		this.x = x;
+		this.y = y;
+	}
+	var perPosition = new Point(5,5);//man init location
+	//draw map in each level
+	function DrawMap(level){
+		for (var i=0;i<level.length ;i++ )
+		{
+			for (var j=0;j<level[i].length ;j++ )
+			{
+				var pic = block;
+				switch (level[i][j])
+				{
+				case 1://wall
+					pic = wall;
+					break;
+				case 2://bin
+					pic = ball;
+					break;
+				case 3://trash
+					pic = box;
+					break;
+				case 4://man
+					pic = curMan;//man facing direction
+					//get location of the man
+					perPosition.x = i;
+					perPosition.y = j;
+					break;
+				case 5://draw trash and bin
+					pic = box;
+					break;
+				}
+				//Draw map in the center of the ground
+				cxt.drawImage(pic,w*j-(pic.width-w)/2,h*i-(pic.height-h),pic.width,pic.height)
+			}
+		}
+	}
+	//initiate level
+	function initLevel(){
+		curMap = copyArray(levels[iCurlevel]);//current map
+		curLevel = levels[iCurlevel];//get current lv
+		curMan = down;
+		InitMap();
+		DrawMap(curMap);
+	}
+	//next level
+	function NextLevel(i){
+
+		iCurlevel = iCurlevel + i;
+		if (iCurlevel<0)
+		{
+			iCurlevel = 0;
+			return;
+		}
+		var len = levels.length;
+		if (iCurlevel > len-1)
+		{
+			iCurlevel = len-1;
+		}
+		initLevel();
+		moveTimes = 0;
+		showMoveInfo();
+	}
+	//man moving
+	function go(dir){
+		var p1,p2;
+		switch (dir)
+		{
+		case "up":
+			curMan = up;
+			//check whether man could move
+			p1 = new Point(perPosition.x-1,perPosition.y);
+			p2 = new Point(perPosition.x-2,perPosition.y);
+			break;
+		case "down":
+			curMan = down;
+			p1 = new Point(perPosition.x+1,perPosition.y);
+			p2 = new Point(perPosition.x+2,perPosition.y);
+			break;
+		case "left":
+			curMan = left;
+			p1 = new Point(perPosition.x,perPosition.y-1);
+			p2 = new Point(perPosition.x,perPosition.y-2);
+			break;
+		case "right":
+			curMan = right;
+			p1 = new Point(perPosition.x,perPosition.y+1);
+			p2 = new Point(perPosition.x,perPosition.y+2);
+			break;
+		}
+		//if man move, draw new map
+		if (Trygo(p1,p2))
+		{
+			moveTimes ++;
+			showMoveInfo();
+		}
+		//draw ground
+		InitMap();
+		//draw new map
+		DrawMap(curMap);
+		//go to next level
+		if (checkFinish())
+		{
+			// alert("Congratulation!");
+			NextLevel(1);
+		}
+	}
+	//check pushing
+	function checkFinish(){
+		for (var i=0;i<curMap.length ;i++ )
+		{
+			for (var j=0;j<curMap[i].length ;j++ )
+			{
+								if (curLevel[i][j] == 2 && curMap[i][j] != 3 || curLevel[i][j] == 5 && curMap[i][j] != 3)
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	//check whether man could move
+	function Trygo(p1,p2){
+		if(p1.x<0) return false;//top border
+		if(p1.y<0) return false;//left border
+		if(p1.x>curMap.length) return false;//down border
+		if(p1.y>curMap[0].length) return false;//right border
+		if(curMap[p1.x][p1.y]==1) return false;//hit the wall
+		if (curMap[p1.x][p1.y]==3 || curMap[p1.x][p1.y]==5)
+		{//moving with pushing trash
+			if (curMap[p2.x][p2.y]==1 || curMap[p2.x][p2.y]==3)
+			{
+				return false;
+			}
+
+			curMap[p2.x][p2.y] = 3;
+			//console.log(curMap[p2.x][p2.y]);
+		}
+		//could moving
+		curMap[p1.x][p1.y] = 4;
+
+		var v = curLevel[perPosition.x][perPosition.y];
+		if (v!=2)
+		{
+			if (v==5)
+			{
+				v=2;
+			}else{
+				v=0;
+			}
+		}
+			curMap[perPosition.x][perPosition.y] = v;
+			perPosition = p1;
+				return true;
+	}
+
+	//Moving with keyboard arrow buttons
+	function doKeyDown(event){
+		switch (event.keyCode)
+		{
+		case 65:
+			go("left");
+			break;
+		case 87:
+			go("up");
+			break;
+		case 68:
+			go("right");
+			break;
+		case 83:
+			go("down");
+			break;
+		}
+
+	}
+	//Game Feedback
+	function showMoveInfo(){
+		msg.innerHTML = "Level " + (iCurlevel+1) +"<br> you have moved: "+ moveTimes +" steps";
+	}
+
+	//Each move will update map
+	function copyArray(arr){
+		var b=[];//Clear map data and add new map data for each move
+		for (var i=0;i<arr.length ;i++ )
+		{
+			b[i] = arr[i].concat();
+		}
+		return b;
+	}
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>	
+</html>

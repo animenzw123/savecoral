@@ -1,0 +1,145 @@
+@media only screen and (min-width: 1024px)  {
+    div.container {
+        text-align: center
+    }
+    .container h4{
+        font-family: "Comic Sans MS";
+        line-height: 200%;
+       
+    }
+    .factHero {
+        margin-top: 100px;
+        text-align: center;
+        background-image: url(../img/fact1.png);
+        background-size:cover;
+        width:100%;
+        height:550px;
+    }
+    .coral-text h4{
+        padding: 30px;
+        
+    }
+    .coral-text1 h4{
+        padding: 30px;
+        text-align:center;
+        color: black;
+        line-height: 200%;
+    }
+
+
+    .fulltext{
+        text-align: left;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #seven p{
+        font-size: 25px;
+        font-family: "Comic Sans MS";
+        color: #2C4755;
+    }
+    .coral-video{
+        margin: auto;
+        background-color: #aaaaaa;
+        background-image: url(../img/video-bc.png);
+        padding-bottom: 20px;
+        background-size: cover;
+        text-align: center;
+    }
+    .majorSpecies{
+        background-image: url(../img/bc2.jpg);
+        background-size: cover;
+        padding-bottom: 10px;
+    }
+    .more{
+        background-image: url(../img/bc4.jpg);
+        background-size: cover;
+    }
+    .map{
+        background-image: url(../img/bc2.jpg);
+        background-size: cover;
+        padding-bottom: 50px;
+    }
+
+}
+@media only screen and (max-width: 1023px) and (min-width: 570px)  {
+    h4{
+        font-family: "Comic Sans MS";
+        font-size: 16px;
+    }
+    h5,h6{
+        font-size: 40px;
+    }
+
+    #vizContainer{
+        width: 480px;
+        height: 500px;
+    }
+    .navbar{
+        padding-top: 5px;
+    }
+    .navbar a {
+        color: #2C4755;
+        font-size: 13px;
+        font-weight: 400;
+        font-family: "Comic Sans MS";
+    }
+    .navbar a:hover {
+        color: rgba(59, 132, 201, 1);
+        text-decoration: none;
+    }
+    .logo{
+        display: none;
+    }
+
+    .nav-header {
+        width: 100%;
+        height: 30px;
+        margin-top: -1px;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        top: 0px;
+        left: 0px;
+    }
+}
+@media only screen and (max-width: 569px) {
+    h4{
+        font-family: "Comic Sans MS";
+        font-size: 10px;
+    }
+    h5,h6{
+        font-size: 26px;
+    }
+
+    #vizContainer{
+        width: 300px;
+        height: 200px;
+    }
+    .navbar{
+        padding-top: 5px;
+    }
+    .navbar a {
+        color: #2C4755;
+        font-size: 5px;
+        font-weight: 400;
+        font-family: "Comic Sans MS";
+    }
+    .navbar a:hover {
+        color: rgba(59, 132, 201, 1);
+        text-decoration: none;
+    }
+    .logo{
+        display: none;
+    }
+
+    .nav-header {
+        width: 100%;
+        height: 30px;
+        margin-top: -1px;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        top: 0px;
+        left: 0px;
+    }
+}

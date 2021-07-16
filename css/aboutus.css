@@ -1,0 +1,234 @@
+html, body {
+    height: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    .goal {
+        background-image: url("../quizImages/aboutbg.png");
+        background-size: cover;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .logo {
+        padding-top: 20px;
+    }
+
+    .navbar {
+        padding-top: 21px;
+    }
+
+    .navbar a {
+        color: #2C4755;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: "Comic Sans MS";
+    }
+
+    .navbar a:hover {
+        color: rgba(59, 132, 201, 1);
+        text-decoration: none;
+    }
+
+    .teampic {
+        margin-top: 100px;
+        border-radius: 10px;
+        border: 1px solid #eeeeee;
+        box-shadow: 8px 8px 8px #717171;
+        -webkit-box-shadow: 8px 8px 8px #717171;
+        -moz-box-shadow: 8px 8px 8px #717171;
+    }
+
+    .nav-header {
+        width: 100%;
+        height: 80px;
+        margin-top: -1px;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        top: 0px;
+        left: 0px;
+    }
+
+    .aboutHeader {
+        text-align: center;
+        background-image: url(../quizImages/aboutHeader.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 550px;
+    }
+
+
+    .title {
+        margin: 0px auto;
+        padding: 35px 0px 80px;
+        float: left;
+        text-shadow: 5px 5px 5px #eee;
+    }
+
+    h6 {
+        color: rgba(59, 132, 201, 1);
+        font-size: 72px;
+        font-family: "Work Sans";
+        font-weight: 800;
+        letter-spacing: -0.3rem;
+        margin-top: 65px;
+    }
+
+    .about-img {
+        padding: 50px 0 50px 0;
+        text-align: center;
+    }
+
+
+    .about-img img {
+        border: 1px solid #6C6C6C;
+        border-radius: 5px;
+        box-shadow: 8px 8px 8px #717171;
+        -webkit-box-shadow: 8px 8px 8px #717171;
+        -moz-box-shadow: 8px 8px 8px #717171;
+    }
+
+    .about-text {
+        margin-top: 20px;
+        height: 260px;
+        padding: 10px;
+
+    }
+
+    .separator {
+        margin-bottom: 15px;
+        width: 100%;
+        height: 5px;
+        border-radius: 2px;
+        background-color: #4867AD;
+    }
+
+    h4 {
+        padding-top: 50px;
+        margin: 10px;
+        color: #2C4755;
+        font-size: 20px;
+        font-family: "Comic Sans MS";
+    }
+
+    .footer {
+        padding-top: 2.5rem;
+        background-image: url(../img/foot.jpg);
+    }
+
+    .footer .footer-col {
+        margin-bottom: 2.25rem;
+    }
+
+    .footer-img:hover {
+        cursor: pointer;
+    }
+
+    h3 {
+        font-family: "Comic Sans MS";
+        font-size: 20px;
+        font-weight: 400;
+        padding-bottom: 15px;
+    }
+
+    p {
+        font-size: 12px;
+        font-family: "Comic Sans MS";
+        padding-bottom: 10px;
+        letter-spacing: -0.03rem;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 570px) {
+    h4 {
+        font-family: "Comic Sans MS";
+        font-size: 16px;
+    }
+
+    h5, h6 {
+        font-size: 40px;
+    }
+
+    .teampic{
+        display: none;
+    }
+
+    .navbar {
+        padding-top: 5px;
+    }
+
+    .navbar a {
+        color: #2C4755;
+        font-size: 13px;
+        font-weight: 400;
+        font-family: "Comic Sans MS";
+    }
+
+    .navbar a:hover {
+        color: rgba(59, 132, 201, 1);
+        text-decoration: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav-header {
+        width: 100%;
+        height: 30px;
+        margin-top: -1px;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    h4 {
+        font-family: "Comic Sans MS";
+        font-size: 10px;
+    }
+
+    h5, h6 {
+        font-size: 26px;
+    }
+
+    .teampic{
+        display: none;
+    }
+
+    .navbar {
+        padding-top: 5px;
+    }
+
+    .navbar a {
+        color: #2C4755;
+        font-size: 5px;
+        font-weight: 400;
+        font-family: "Comic Sans MS";
+    }
+
+    .navbar a:hover {
+        color: rgba(59, 132, 201, 1);
+        text-decoration: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .nav-header {
+        width: 100%;
+        height: 30px;
+        margin-top: -1px;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 999;
+        top: 0px;
+        left: 0px;
+    }
+}

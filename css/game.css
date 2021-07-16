@@ -1,0 +1,195 @@
+@media only screen and (min-width: 1024px)  {
+.main{
+    background-image: url("../gameImages/gameBG1.jpg");
+    background-size: cover;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.logo {
+    padding-top: 20px;
+}
+.navbar{
+    padding-top: 21px;
+}
+.navbar a {
+    color: #2C4755;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: "Comic Sans MS";
+}
+.navbar a:hover {
+    color: rgba(59, 132, 201, 1);
+    text-decoration: none;
+}
+
+.nav-header {
+    width: 100%;
+    height: 80px;
+    margin-top: -1px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+}
+.gameHero {
+    text-align: center;
+    background-image: url(../gameImages/gameheader.png);
+    background-size:cover;
+    width:100%;
+    height:550px;
+}
+
+figure {
+    height: 537px;
+    width: 540px;
+    margin: 0;
+    padding: 0;
+    background-image: url("../quizImages/quizBG1.jpg");
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 4px 4px 3px #6C6C6C;
+    -webkit-box-shadow: 4px 4px 3px #6C6C6C;
+    -moz-box-shadow: 4px 4px 3px #6C6C6C;
+
+}
+figure:hover+span {
+    height: 540px;
+    width: 540px;
+    bottom: -36px;
+    opacity: 1;
+}
+.title {
+    margin: 0px auto;
+    padding:35px 0px 80px;
+    float: left;
+    text-shadow: 5px 5px 5px #eee;
+}
+
+h6 {
+    color: rgba(59, 132, 201, 1);
+    font-size: 72px;
+    font-family: "Work Sans";
+    font-weight: 800;
+    letter-spacing: -0.3rem;
+    margin-top: 65px;
+}
+
+.game-frame{
+    border-radius: 5px;
+}
+
+.hover01 figure img {
+    /*-webkit-transform: scale(1);*/
+    /*transform: scale(1);*/
+    /*-webkit-transition: .3s ease-in-out;*/
+    /*transition: .3s ease-in-out;*/
+
+    /*margin: 10px;*/
+
+    border: 15px solid #eee;
+    -webkit-box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+
+
+
+}
+
+.hover01 figure:hover img {
+    /*-webkit-transform: scale(1.3);*/
+    /*transform: scale(1.3);*/
+
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+
+}
+
+.game-text {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 0 0 5px 5px;
+    background-image: url("../quizImages/quizBG1.jpg");
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 4px 4px 3px #6C6C6C, inset 5px 3px 5px #eeeeee;
+    -webkit-box-shadow: 4px 4px 3px #6C6C6C, inset 5px 3px 5px #eeeeee;
+    -moz-box-shadow: 4px 4px 3px #6C6C6C, inset 5px 3px 5px #eeeeee;
+}
+.game-text p {
+    padding-bottom: 5px;
+    font-family: "Comic Sans MS";
+
+}
+.footer {
+    padding-top: 2.5rem;
+    background-image: url(../img/foot.jpg);
+}
+
+.footer .footer-col {
+    margin-bottom: 2.25rem;
+}
+
+.footer-img:hover{
+    cursor:pointer;
+}
+h3 {
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 15px;
+}
+p {
+    font-size: 15px;
+    font-family: "Comic Sans MS";
+    padding-bottom: 10px;
+    letter-spacing: -0.03rem;
+    line-height: 30px;
+}}
+@media only screen and (max-width: 1024px) and (min-width: 570px) {
+    figure {
+        height: 300px;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        background-image: url("../quizImages/quizBG1.jpg");
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 4px 4px 3px #6C6C6C;
+        -webkit-box-shadow: 4px 4px 3px #6C6C6C;
+        -moz-box-shadow: 4px 4px 3px #6C6C6C;
+
+    }
+    figure:hover+span {
+        height: 300px;
+        width: 300px;
+        bottom: -18px;
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 570px) {
+    figure {
+        height: 150px;
+        width: 150px;
+        margin: 0;
+        padding: 0;
+        background-image: url("../quizImages/quizBG1.jpg");
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 4px 4px 3px #6C6C6C;
+        -webkit-box-shadow: 4px 4px 3px #6C6C6C;
+        -moz-box-shadow: 4px 4px 3px #6C6C6C;
+
+    }
+    figure:hover+span {
+        height: 150px;
+        width: 150px;
+        bottom: -18px;
+        opacity: 1;
+    }
+}
